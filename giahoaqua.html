@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <input type="text" id="69"/>
+    <button onclick="xemgia ()">xem giá</button>
+    <p id="msg"> </p>
+    <script>
+        function xemgia () {
+            var tên = (document.getElementById('69').value);
+            var a;
+            switch(tên) {
+                case 'ổi':
+                case 'dưa hấu':
+                    alert('20000VNĐ/Kg');
+                break;
+                case 'táo':
+                case 'xoài':
+                    alert('30000VNĐ/Kg');
+                break;
+                case 'cam':
+                case "chôm chôm":
+                    alert('40000VNĐ/Kg');
+                break;
+                case 'măng cụt':
+                alert('50000VNĐ/Kg');
+                break;
+                default:
+            }
+        }
+    </script>
+    </body>
+</html>

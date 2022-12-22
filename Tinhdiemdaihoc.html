@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <p>Tính Điểm Khối D</p>
+    Môn Toán <input type="text" id="00"/><br><br>
+    Môn Văn<input type="text" id="11"/><br><br>
+    Môn Anh<input type="text" id="22"/><br><br>
+    Khu Vực<select name="khu vực" name="khu vực" id="33">
+        <option value="KV1">KV1</option>
+        <option value="KV2">KV2</option>
+        <option value="KV2-NT">KV2-NT </option>
+        <option value="KV3" >KV3</option>
+    </select>
+    <button onclick="tinhdiem ()">tính điểm</button>
+    <p id="msg"></p>
+    <script>
+        function tinhdiem () {
+            var KV = (document.getElementById("33").value);
+            var a = Number(document.getElementById("00").value);
+            var b = Number(document.getElementById("11").value);
+            var c = Number(document.getElementById("22").value);
+        switch(KV) {
+            case 'KV1':
+                KV = 0.75;
+            break;
+            case 'KV2':
+            KV = 0.5
+             break;
+            case 'KV2-NT':
+            KV = 0.25;
+             break;
+            case 'KV3':
+            KV = 0;
+            break;
+            default:
+        } 
+        let tong = a + b + c + KV;
+        document.getElementById("msg").innerHTML='Tổng điểm ĐH khối D của bạn là:' + tong
+    }
+    </script>
+    </body>
+</html>

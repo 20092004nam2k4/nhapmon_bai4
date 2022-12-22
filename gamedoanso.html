@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>game đoán số</title>
+    </head>
+    <body>
+        <button type="11" onclick=" batdau ()">bắt đầu</button>
+        <script>   
+     function batdau () {
+        let sbk = Math.round(Math.random()*10);
+        let doan;
+            do {doan = Number(prompt('nhập số dự đoán'));
+         if(sbk == doan) {
+            alert('bạn đã đoán trúng');
+         } else if(sbk <doan) {
+            alert("số dự đoán phải nhỏ hơn số bí mật");
+         } else {
+            alert("số dự đoán phải lớn hơn số bí mật ");
+         }
+        }while (sbk != doan) }
+        </script>
+    </body>
+</html>
